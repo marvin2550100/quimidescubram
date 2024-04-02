@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Quimidescubram</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body onload="card_selector()">
+        <script src="./main.js"></script>
+        <div id="user_card">
+            <h1 class="card_header" id="card_header_element">Você é:</h1>
+            <h2 class="u_mol" id="user_mol_name">Null</h2>
+
+            <div id="user_molecule">
+                <div id="user_mol_image">
+                    <iframe id="frame_3d" frameborder="0" src="a"></iframe>
+                    <img id="lewis_frame" src="a">
+                    <button id="frame_button" onclick="lewisChange()">Lewis</button>
+                </div>
+            </div>
+
+            <button class="card_button" onclick="hintShow()">Dicas</button>
+            <button class="card_button" id="exit_button" onclick="home_redirect()">Sair</button>
+        </div>
+        <div id="hints" class="dropdown-content">
+            <h1 class="card_header" id="c_h_center">Dicas</h1>
+            <p class="molecule_hints" id="hint_1">Dica 1: </p>
+            <p class="molecule_hints" id="hint_2">Dica 2: </p>
+            <p class="molecule_hints" id="hint_3">Dica 3: </p>
+            <p class="molecule_hints" id="hint_4">Dica 4: </p>
+            <p class="molecule_hints" id="hint_5">Dica 5: </p>
+            <p class="molecule_hints" id="hint_6">Dica 6: </p>
+            <p class="molecule_hints" id="hint_7">Dica 7: </p>
+        </div>
+
+        <div id="user_board">
+            <div id="img0" class="board_image"><img id="shd0" class="back_shield" src="./src/board_images/back_shield.jpg" onclick="flipping(this.id)"><p class="board_names">Hidrogênio</p></div>
+            <div id="img1" class="board_image"><img id="shd1" class="back_shield" src="./src/board_images/back_shield.jpg" onclick="flipping(this.id)"><p class="board_names">Ácido Cianídrico</p></div>
+            <div id="img2" class="board_image"><img id="shd2" class="back_shield" src="./src/board_images/back_shield.jpg" onclick="flipping(this.id)"><p class="board_names">Dióxido de Enxofre</p></div>
+            <div id="img3" class="board_image"><img id="shd3" class="back_shield" src="./src/board_images/back_shield.jpg" onclick="flipping(this.id)"><p class="board_names">Dióxido de Carbono</p></div>
+            <div id="img4" class="board_image"><img id="shd4" class="back_shield" src="./src/board_images/back_shield.jpg" onclick="flipping(this.id)"><p class="board_names">Oxigênio</p></div>
+            <div id="img5" class="board_image"><img id="shd5" class="back_shield" src="./src/board_images/back_shield.jpg" onclick="flipping(this.id)"><p class="board_names">Água</p></div>
+
+            <div id="img6" class="board_image"><img id="shd6" class="back_shield" src="./src/board_images/back_shield.jpg" onclick="flipping(this.id)"><p class="board_names">Fluoreto de Nitrosila</p></div>
+            <div id="img7" class="board_image"><img id="shd7" class="back_shield" src="./src/board_images/back_shield.jpg" onclick="flipping(this.id)"><p class="board_names">Difluoreto de Oxigênio</p></div>
+            <div id="img8" class="board_image"><img id="shd8" class="back_shield" src="./src/board_images/back_shield.jpg" onclick="flipping(this.id)"><p class="board_names">Ácido Sulfídrico</p></div>
+            <div id="img9" class="board_image"><img id="shd9" class="back_shield" src="./src/board_images/back_shield.jpg" onclick="flipping(this.id)"><p class="board_names">Cloreto de Tionila</p></div>
+            <div id="img10" class="board_image"><img id="shd10" class="back_shield" src="./src/board_images/back_shield.jpg" onclick="flipping(this.id)"><p class="board_names">Amônia</p></div>
+            <div id="img11" class="board_image"><img id="shd11" class="back_shield" src="./src/board_images/back_shield.jpg" onclick="flipping(this.id)"><p class="board_names">Tricloreto de Fósforo</p></div>
+
+            <div id="img12" class="board_image"><img id="shd12" class="back_shield" src="./src/board_images/back_shield.jpg" onclick="flipping(this.id)"><p class="board_names">Fosfito</p></div>
+            <div id="img13" class="board_image"><img id="shd13" class="back_shield" src="./src/board_images/back_shield.jpg" onclick="flipping(this.id)"><p class="board_names">Hidrônio</p></div>
+            <div id="img14" class="board_image"><img id="shd14" class="back_shield" src="./src/board_images/back_shield.jpg" onclick="flipping(this.id)"><p class="board_names">Nitrato</p></div>
+            <div id="img15" class="board_image"><img id="shd15" class="back_shield" src="./src/board_images/back_shield.jpg" onclick="flipping(this.id)"><p class="board_names">Fluoreto de Boro</p></div>
+            <div id="img16" class="board_image"><img id="shd16" class="back_shield" src="./src/board_images/back_shield.jpg" onclick="flipping(this.id)"><p class="board_names">Carbonato</p></div>
+            <div id="img17" class="board_image"><img id="shd17" class="back_shield" src="./src/board_images/back_shield.jpg" onclick="flipping(this.id)"><p class="board_names">Fosgênio</p></div>
+
+            <div id="img18" class="board_image"><img id="shd18" class="back_shield" src="./src/board_images/back_shield.jpg" onclick="flipping(this.id)"><p class="board_names">Borano</p></div>
+            <div id="img19" class="board_image"><img id="shd19" class="back_shield" src="./src/board_images/back_shield.jpg" onclick="flipping(this.id)"><p class="board_names">Metano</p></div>
+            <div id="img20" class="board_image"><img id="shd20" class="back_shield" src="./src/board_images/back_shield.jpg" onclick="flipping(this.id)"><p class="board_names">Amônio</p></div>
+            <div id="img21" class="board_image"><img id="shd21" class="back_shield" src="./src/board_images/back_shield.jpg" onclick="flipping(this.id)"><p class="board_names">Sulfato</p></div>
+            <div id="img22" class="board_image"><img id="shd22" class="back_shield" src="./src/board_images/back_shield.jpg" onclick="flipping(this.id)"><p class="board_names">Tetrafluor<br>borato</p></div>
+            <div id="img23" class="board_image"><img id="shd23" class="back_shield" src="./src/board_images/back_shield.jpg" onclick="flipping(this.id)"><p class="board_names">Clorometano</p></div>
+        </div>
+    </body>
+</html>

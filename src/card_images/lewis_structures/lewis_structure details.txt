@@ -1,0 +1,3 @@
+Name: lewis_X
+Height: 480px
+Width: 640px
